@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		38D44722240B95260094EEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44721240B95260094EEC6 /* AppDelegate.swift */; };
 		38D44724240B95260094EEC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44723240B95260094EEC6 /* SceneDelegate.swift */; };
-		38D44726240B95260094EEC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44725240B95260094EEC6 /* ViewController.swift */; };
 		38D44729240B95260094EEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D44727240B95260094EEC6 /* Main.storyboard */; };
 		38D4472C240B95260094EEC6 /* Prography_6th_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38D4472A240B95260094EEC6 /* Prography_6th_iOS.xcdatamodeld */; };
 		38D4472E240B95290094EEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D4472D240B95290094EEC6 /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		38D4473C240B95290094EEC6 /* Prography_6th_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D4473B240B95290094EEC6 /* Prography_6th_iOSTests.swift */; };
 		38D44747240B952A0094EEC6 /* Prography_6th_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44746240B952A0094EEC6 /* Prography_6th_iOSUITests.swift */; };
 		38D44755240B9BA10094EEC6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44754240B9BA10094EEC6 /* Model.swift */; };
+		38D44757240B9C1E0094EEC6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44756240B9C1E0094EEC6 /* Request.swift */; };
+		38D44759240BA6E30094EEC6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44758240BA6E30094EEC6 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		38D4471E240B95260094EEC6 /* Prography_6th_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prography_6th_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D44721240B95260094EEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D44723240B95260094EEC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38D44725240B95260094EEC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38D44728240B95260094EEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38D4472B240B95260094EEC6 /* Prography_6th_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prography_6th_iOS.xcdatamodel; sourceTree = "<group>"; };
 		38D4472D240B95290094EEC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		38D44746240B952A0094EEC6 /* Prography_6th_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prography_6th_iOSUITests.swift; sourceTree = "<group>"; };
 		38D44748240B952A0094EEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D44754240B9BA10094EEC6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		38D44756240B9C1E0094EEC6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		38D44758240BA6E30094EEC6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +107,10 @@
 			children = (
 				38D44721240B95260094EEC6 /* AppDelegate.swift */,
 				38D44723240B95260094EEC6 /* SceneDelegate.swift */,
-				38D44725240B95260094EEC6 /* ViewController.swift */,
 				38D44727240B95260094EEC6 /* Main.storyboard */,
 				38D44754240B9BA10094EEC6 /* Model.swift */,
+				38D44756240B9C1E0094EEC6 /* Request.swift */,
+				38D44758240BA6E30094EEC6 /* MainViewController.swift */,
 				38D4472D240B95290094EEC6 /* Assets.xcassets */,
 				38D4472F240B95290094EEC6 /* LaunchScreen.storyboard */,
 				38D44732240B95290094EEC6 /* Info.plist */,
@@ -266,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D44755240B9BA10094EEC6 /* Model.swift in Sources */,
-				38D44726240B95260094EEC6 /* ViewController.swift in Sources */,
+				38D44757240B9C1E0094EEC6 /* Request.swift in Sources */,
 				38D4472C240B95260094EEC6 /* Prography_6th_iOS.xcdatamodeld in Sources */,
+				38D44759240BA6E30094EEC6 /* MainViewController.swift in Sources */,
 				38D44722240B95260094EEC6 /* AppDelegate.swift in Sources */,
 				38D44724240B95260094EEC6 /* SceneDelegate.swift in Sources */,
 			);
