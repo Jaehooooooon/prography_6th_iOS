@@ -16,6 +16,7 @@
 		38D44731240B95290094EEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D4472F240B95290094EEC6 /* LaunchScreen.storyboard */; };
 		38D4473C240B95290094EEC6 /* Prography_6th_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D4473B240B95290094EEC6 /* Prography_6th_iOSTests.swift */; };
 		38D44747240B952A0094EEC6 /* Prography_6th_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44746240B952A0094EEC6 /* Prography_6th_iOSUITests.swift */; };
+		38D44755240B9BA10094EEC6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D44754240B9BA10094EEC6 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		38D44742240B95290094EEC6 /* Prography_6th_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Prography_6th_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D44746240B952A0094EEC6 /* Prography_6th_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prography_6th_iOSUITests.swift; sourceTree = "<group>"; };
 		38D44748240B952A0094EEC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D44754240B9BA10094EEC6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				38D44723240B95260094EEC6 /* SceneDelegate.swift */,
 				38D44725240B95260094EEC6 /* ViewController.swift */,
 				38D44727240B95260094EEC6 /* Main.storyboard */,
+				38D44754240B9BA10094EEC6 /* Model.swift */,
 				38D4472D240B95290094EEC6 /* Assets.xcassets */,
 				38D4472F240B95290094EEC6 /* LaunchScreen.storyboard */,
 				38D44732240B95290094EEC6 /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D44755240B9BA10094EEC6 /* Model.swift in Sources */,
 				38D44726240B95260094EEC6 /* ViewController.swift in Sources */,
 				38D4472C240B95260094EEC6 /* Prography_6th_iOS.xcdatamodeld in Sources */,
 				38D44722240B95260094EEC6 /* AppDelegate.swift in Sources */,
