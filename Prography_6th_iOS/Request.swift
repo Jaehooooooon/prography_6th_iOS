@@ -8,7 +8,7 @@
 
 import Foundation
 
-let DidReceiveMoivesNoti: Notification.Name = Notification.Name("DidReceivedMovies")
+let DidReceiveMoivesNoti: Notification.Name = Notification.Name("DidReceiveMoivesNoti")
 
 let baseURL: String = "https://yts.lt/api/v2/list_movies.json?"
 var sortOption: Int = 0
@@ -18,7 +18,7 @@ func requestMovies(minimumRating: Int) {
     print("requestMovies, minimumRating : ", minimumRating )
     guard let url: URL = URL(string: baseURL + "minimum_rating=" + String(minimumRating) + "&limit=10") else { return }
     let session: URLSession = URLSession(configuration: .default)
-    
+
     let dataTask: URLSessionDataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
         if let error = error {
             print(error.localizedDescription)
