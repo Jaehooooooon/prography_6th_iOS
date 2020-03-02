@@ -50,8 +50,8 @@ class MovieListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListTableViewCell", for: indexPath)
         let movie = self.movies[indexPath.row]
         if let cell = (cell as? MovieListTableViewCell) {
-            cell.titleLabel.text = movie.title
-            cell.ratingLabel.text = String(format:"%.1f", movie.rating ?? 0)
+            cell.movie = movie
+            cell.update()
             cell.layer.borderWidth = 0.3
         }
         
@@ -65,8 +65,11 @@ class MovieListTableViewController: UITableViewController {
         if let cell = sender as? MovieListTableViewCell {
             let vc = segue.destination
             if let nextvc = (vc as? MovieDetailViewController) {
-                nextvc.titleToSet = cell.titleLabel.text
-                nextvc.ratingToSet = cell.ratingLabel.text
+                if let movie = cell.movie {
+                    nextvc.titleToSet = movie.title
+                    nextvc.ratingToSet = String(format:"%.1f", movie.rating ?? 0)
+                    nextvc.imageUrlToSet = movie.mediumCoverImage
+                }
             }
         }
     }

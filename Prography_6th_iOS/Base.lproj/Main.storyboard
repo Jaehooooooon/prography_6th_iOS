@@ -155,13 +155,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39t-yy-fZH">
+                                <rect key="frame" x="20" y="203" width="120" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="4Gg-g0-CQC"/>
+                                    <constraint firstAttribute="width" constant="120" id="uL4-F1-ZJI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aDD-P6-fv7" firstAttribute="trailing" secondItem="CzQ-J1-cbM" secondAttribute="trailingMargin" id="3Tj-YR-mLe"/>
                             <constraint firstItem="w9f-rO-XNj" firstAttribute="leading" secondItem="CzQ-J1-cbM" secondAttribute="leadingMargin" id="40o-cc-y3y"/>
                             <constraint firstItem="OKY-h0-i1I" firstAttribute="top" secondItem="w9f-rO-XNj" secondAttribute="bottom" constant="20" id="8dW-n5-jOz"/>
+                            <constraint firstItem="39t-yy-fZH" firstAttribute="top" secondItem="OKY-h0-i1I" secondAttribute="bottom" constant="20" id="G5V-DF-tUQ"/>
                             <constraint firstItem="PEp-cA-q24" firstAttribute="trailing" secondItem="w9f-rO-XNj" secondAttribute="trailing" constant="20" id="IeT-63-AkW"/>
+                            <constraint firstItem="39t-yy-fZH" firstAttribute="leading" secondItem="OKY-h0-i1I" secondAttribute="leading" id="NIb-K8-Svd"/>
                             <constraint firstItem="aDD-P6-fv7" firstAttribute="centerY" secondItem="OKY-h0-i1I" secondAttribute="centerY" id="SSb-To-xpU"/>
                             <constraint firstItem="w9f-rO-XNj" firstAttribute="leading" secondItem="OKY-h0-i1I" secondAttribute="leading" id="dWg-1R-lWQ"/>
                             <constraint firstItem="PEp-cA-q24" firstAttribute="trailing" secondItem="OKY-h0-i1I" secondAttribute="trailing" constant="364.5" id="prd-pu-3j3"/>
@@ -171,6 +180,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wom-mL-TxL"/>
                     <connections>
+                        <outlet property="imageView" destination="39t-yy-fZH" id="SfX-My-cMF"/>
                         <outlet property="ratingLabel" destination="aDD-P6-fv7" id="uob-JE-RKP"/>
                         <outlet property="titleLabel" destination="w9f-rO-XNj" id="e2x-Aj-frJ"/>
                     </connections>

@@ -13,6 +13,15 @@ class MovieListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    
+    var movie: Movie?
+    
+    func update() {
+        if let movie = self.movie {
+            titleLabel.text = movie.title
+            ratingLabel.text = String(format:"%.1f", movie.rating ?? 0)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
