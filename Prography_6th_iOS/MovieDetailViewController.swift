@@ -19,7 +19,7 @@ class MovieDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let title = self.titleToSet, let rating = self.ratingToSet, let imageUrl = self.imageUrlToSet {
             titleLabel.text = title
             ratingLabel.text = rating
