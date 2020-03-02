@@ -11,15 +11,14 @@ import UIKit
 class MovieListTableViewController: UITableViewController {
     static let identifier = "MovieListTableViewController"
     
-    var minimumRating: Int?
+    var minimumRating = 0
     var movies: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let rating = self.minimumRating {
-            requestMovies(minimumRating: rating)
-        }
+        requestMovies(minimumRating: minimumRating)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveMoviesNoti(_:)), name: DidReceiveMoivesNoti, object: nil)
     }
 
@@ -34,9 +33,7 @@ class MovieListTableViewController: UITableViewController {
     }
     
     @IBAction func touchUpNextButton() {
-        if let rating = self.minimumRating {
-            requestMovies(minimumRating: rating)
-        }
+        requestMovies(minimumRating: minimumRating)
     }
     
     // MARK: - Table view data source

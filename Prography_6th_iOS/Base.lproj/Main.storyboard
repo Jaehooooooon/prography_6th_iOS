@@ -59,6 +59,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie" id="fg1-Wu-s1U"/>
                     <connections>
+                        <outlet property="nextButton" destination="fTs-qH-Qag" id="WFf-UW-wGb"/>
                         <outlet property="pickerView" destination="kIw-58-lDQ" id="e4j-Mu-jVv"/>
                     </connections>
                 </viewController>

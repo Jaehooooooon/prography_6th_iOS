@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var nextButton: UIButton!
     
     var ratingSelected: Int?
     var ratingToPick: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -18,7 +19,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nextButton.layer.cornerRadius = 7
+        nextButton.layer.shadowColor = UIColor.black.cgColor
+        nextButton.layer.shadowRadius = 10
+        nextButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        nextButton.layer.shadowOpacity = 0.5
     }
     
     // MARK: - Navigation
