@@ -17,7 +17,7 @@ class MovieListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestMovies(minimumRating: minimumRating)
+        requestMovies(minimumRating: minimumRating, limit: 10)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveMoviesNoti(_:)), name: DidReceiveMoivesNoti, object: nil)
     }
@@ -26,14 +26,12 @@ class MovieListTableViewController: UITableViewController {
         print("didReceiveMoviesNoti")
         guard let movies: [Movie] = noti.userInfo!["movies"] as? [Movie] else { return }
 
-        for movie in movies {
-            self.movies.append(movie)
-        }
+        self.movies = movies
         self.tableView.reloadData()
     }
     
     @IBAction func touchUpNextButton() {
-        requestMovies(minimumRating: minimumRating)
+        requestMovies(minimumRating: minimumRating, limit: self.movies.count + 10)
     }
     
     // MARK: - Table view data source
@@ -54,6 +52,7 @@ class MovieListTableViewController: UITableViewController {
         if let cell = (cell as? MovieListTableViewCell) {
             cell.titleLabel.text = movie.title
             cell.ratingLabel.text = String(format:"%.1f", movie.rating ?? 0)
+            cell.layer.borderWidth = 0.3
         }
         
         return cell

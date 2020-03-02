@@ -14,9 +14,9 @@ let baseURL: String = "https://yts.lt/api/v2/list_movies.json?"
 var sortOption: Int = 0
 var idOption: String!
 
-func requestMovies(minimumRating: Int) {
+func requestMovies(minimumRating: Int, limit: Int) {
     print("requestMovies, minimumRating : ", minimumRating )
-    guard let url: URL = URL(string: baseURL + "minimum_rating=" + String(minimumRating) + "&limit=10") else { return }
+    guard let url: URL = URL(string: baseURL + "minimum_rating=" + String(minimumRating) + "&limit=" + String(limit)) else { return }
     let session: URLSession = URLSession(configuration: .default)
 
     let dataTask: URLSessionDataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
