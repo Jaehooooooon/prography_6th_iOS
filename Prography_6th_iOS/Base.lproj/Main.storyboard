@@ -36,7 +36,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1YE-9E-9LT" kind="show" id="mZD-Nh-jxg"/>
+                                    <segue destination="1YE-9E-9LT" kind="show" id="j16-rd-QCb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,15 +55,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movie" id="fg1-Wu-s1U"/>
+                    <connections>
+                        <outlet property="textField" destination="xuk-sQ-0jB" id="Eb4-2T-gWN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="116.51785714285714"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Movie List Table View Controller-->
         <scene sceneID="Bu2-yB-QtF">
             <objects>
-                <tableViewController id="1YE-9E-9LT" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MovieListTableViewController" id="1YE-9E-9LT" customClass="MovieListTableViewController" customModule="Prography_6th_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ktS-Ac-uJ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

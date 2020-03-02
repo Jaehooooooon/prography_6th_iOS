@@ -29,8 +29,10 @@ func requestMovies(minimumRating: Int) {
         do {    //APIResponse 형식으로 디코드
             let movieResponse: MovieResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
             
-            DispatchQueue.main.async {
-                NotificationCenter.default.post(name: DidReceiveMoivesNoti, object: nil, userInfo: ["movies":movieResponse.data?.movies])
+            if let movies = movieResponse.data?.movies {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: DidReceiveMoivesNoti, object: nil, userInfo: ["movies":movies])
+                }
             }
         } catch(let err) {
             print("check")
