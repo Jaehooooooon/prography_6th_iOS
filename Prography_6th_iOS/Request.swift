@@ -16,7 +16,7 @@ var idOption: String!
 
 func requestMovies(minimumRating: Int, limit: Int) {
     print("requestMovies, minimumRating : ", minimumRating )
-    guard let url: URL = URL(string: baseURL + "minimum_rating=" + String(minimumRating) + "&limit=" + String(limit) + "&sort_by=rating") else { return }
+    guard let url: URL = URL(string: baseURL + "minimum_rating=" + String(minimumRating) + "&limit=" + String(limit) + "&sort_by=rating&order_by=asc") else { return }
     let session: URLSession = URLSession(configuration: .default)
 
     let dataTask: URLSessionDataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in

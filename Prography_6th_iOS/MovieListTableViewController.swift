@@ -17,6 +17,7 @@ class MovieListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showSpinner(onView: self.view)
         requestMovies(minimumRating: minimumRating, limit: 10)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveMoviesNoti(_:)), name: DidReceiveMoivesNoti, object: nil)
@@ -28,10 +29,16 @@ class MovieListTableViewController: UITableViewController {
 
         self.movies = movies
         self.tableView.reloadData()
+        self.removeSpinner()
     }
     
     @IBAction func touchUpNextButton() {
-        requestMovies(minimumRating: minimumRating, limit: self.movies.count + 10)
+        var nextLimit = self.movies.count + 10
+        if nextLimit > 50 {
+            nextLimit = 50
+        }
+        self.showSpinner(onView: self.view)
+        requestMovies(minimumRating: minimumRating, limit: nextLimit)
     }
     
     // MARK: - Table view data source
@@ -74,5 +81,30 @@ class MovieListTableViewController: UITableViewController {
         }
     }
     
+}
 
+var vSpinner : UIView?
+extension UIViewController {
+    
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
+        let ai = UIActivityIndicatorView.init(style: .large)
+        ai.startAnimating()
+        ai.center = onView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
+    }
 }
