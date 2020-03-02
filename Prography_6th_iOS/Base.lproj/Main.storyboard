@@ -113,7 +113,13 @@
                             <outlet property="delegate" destination="1YE-9E-9LT" id="XEe-uO-IQG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9HZ-vh-UbJ"/>
+                    <navigationItem key="navigationItem" id="9HZ-vh-UbJ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="yoC-id-u4y">
+                            <connections>
+                                <action selector="touchUpNextButton" destination="1YE-9E-9LT" id="y2C-dh-YSf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwX-qI-zIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
