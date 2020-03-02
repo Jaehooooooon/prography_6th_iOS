@@ -10,6 +10,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    var ratingSelected: Int?
+    var ratingToPick: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +25,31 @@ class MainViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let text = textField.text {
-            if let number:Int = Int(text) {
-                let vc = segue.destination
-                if let nextvc = (vc as? MovieListTableViewController) {
-                    nextvc.minimumRating = number
-                }
-            } else {
-                let alert = UIAlertController(title: "알림", message: "숫자만 입력해주세요", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "확인", style: .default)
-                alert.addAction(okAction)
-                present(alert, animated: true, completion: nil)
+        if let number = self.ratingSelected {
+            let vc = segue.destination
+            if let nextvc = (vc as? MovieListTableViewController) {
+                nextvc.minimumRating = number
             }
         }
     }
     
+}
+
+extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.ratingToPick.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(ratingToPick[row])
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.ratingSelected = ratingToPick[row]
+    }
 }

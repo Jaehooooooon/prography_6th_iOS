@@ -21,11 +21,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(0~9)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-sQ-0jB">
-                                <rect key="frame" x="20" y="149" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-qH-Qag">
                                 <rect key="frame" x="20" y="822" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,16 +34,24 @@
                                     <segue destination="1YE-9E-9LT" kind="show" id="j16-rd-QCb"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIw-58-lDQ">
+                                <rect key="frame" x="0.0" y="137" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ocZ-fl-Ckx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dzy-WJ-SI5"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xuk-sQ-0jB" firstAttribute="leading" secondItem="gf1-oH-JSH" secondAttribute="leading" id="5lf-xf-Csu"/>
+                            <constraint firstItem="fTs-qH-Qag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="911-jJ-aJF"/>
+                            <constraint firstItem="kIw-58-lDQ" firstAttribute="top" secondItem="gf1-oH-JSH" secondAttribute="bottom" constant="8" id="DYB-wP-Kdh"/>
                             <constraint firstItem="gf1-oH-JSH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Dit-hA-EQz"/>
-                            <constraint firstItem="fTs-qH-Qag" firstAttribute="leading" secondItem="xuk-sQ-0jB" secondAttribute="leading" id="IEz-Kk-Y6w"/>
-                            <constraint firstItem="xuk-sQ-0jB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UIR-Zt-F2P"/>
-                            <constraint firstItem="xuk-sQ-0jB" firstAttribute="top" secondItem="gf1-oH-JSH" secondAttribute="bottom" constant="20" id="WC1-uh-Cfg"/>
-                            <constraint firstItem="fTs-qH-Qag" firstAttribute="trailing" secondItem="xuk-sQ-0jB" secondAttribute="trailing" id="ZNk-Zl-nmO"/>
+                            <constraint firstItem="kIw-58-lDQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NP9-uT-NsA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTs-qH-Qag" secondAttribute="trailing" constant="20" id="XmF-ZV-qMJ"/>
+                            <constraint firstItem="kIw-58-lDQ" firstAttribute="centerX" secondItem="fTs-qH-Qag" secondAttribute="centerX" id="d9a-9H-bd8"/>
                             <constraint firstItem="fTs-qH-Qag" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hr7-5x-5br"/>
+                            <constraint firstItem="kIw-58-lDQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qLX-SD-8Yt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gf1-oH-JSH" secondAttribute="trailing" constant="190" id="va3-Kz-vBJ"/>
                             <constraint firstItem="gf1-oH-JSH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ylQ-Pe-Tl9"/>
                         </constraints>
@@ -56,7 +59,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie" id="fg1-Wu-s1U"/>
                     <connections>
-                        <outlet property="textField" destination="xuk-sQ-0jB" id="Eb4-2T-gWN"/>
+                        <outlet property="pickerView" destination="kIw-58-lDQ" id="e4j-Mu-jVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
